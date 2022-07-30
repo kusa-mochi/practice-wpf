@@ -1,4 +1,5 @@
 ﻿using Prism.Mvvm;
+using Prism.Regions;
 
 namespace PracticeRegionManager.ViewModels
 {
@@ -6,9 +7,12 @@ namespace PracticeRegionManager.ViewModels
     {
         public string Title { get; set; } = "けーねアプリ";
 
-        public MainWindowViewModel()
+        public MainWindowViewModel(IRegionManager regionManager)
         {
-
+            _regionManager = regionManager;
+            _regionManager.RegisterViewWithRegion("MainRegion", typeof(PracticeRegionManager.Views.MainRegion.Login));
         }
+
+        private IRegionManager _regionManager = null;
     }
 }

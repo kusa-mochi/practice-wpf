@@ -17,7 +17,8 @@ namespace PracticeRegionManager
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterForNavigation<PracticeRegionManager.Views.MainRegion.Login>();
+            containerRegistry.RegisterForNavigation<PracticeRegionManager.Views.MainRegion.Front>();
         }
     }
 }
