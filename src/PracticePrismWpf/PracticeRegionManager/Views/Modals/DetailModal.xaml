@@ -2,7 +2,14 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True" Width="640" Height="480">
-    <StackPanel>
-        <TextBlock Text="もーだるシンカリオン！！！！！" />
-    </StackPanel>
+    <DockPanel LastChildFill="True">
+        <TreeView DockPanel.Dock="Left">
+            <TreeViewItem Header="大項目">
+                <TreeViewItem Header="中項目">
+                    <TreeViewItem Header="小項目"></TreeViewItem>
+                </TreeViewItem>
+            </TreeViewItem>
+        </TreeView>
+        <ContentControl prism:RegionManager.RegionName="DetailRegion" DockPanel.Dock="Right" />
+    </DockPanel>
 </UserControl>
