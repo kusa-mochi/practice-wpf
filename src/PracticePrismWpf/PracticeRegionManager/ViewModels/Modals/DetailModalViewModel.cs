@@ -48,9 +48,8 @@ namespace PracticeRegionManager.ViewModels.Modals
 
         #region コンストラクタ
 
-        public DetailModalViewModel(IRegionManager regionManager)
+        public DetailModalViewModel()
         {
-            _regionManager = regionManager;
         }
 
         #endregion
@@ -78,6 +77,11 @@ namespace PracticeRegionManager.ViewModels.Modals
 
         public void OnDialogOpened(IDialogParameters parameters)
         {
+            if(parameters.TryGetValue<IRegionManager>("rm", out IRegionManager rm))
+            {
+                _regionManager = rm;
+                _regionManager.RegisterViewWithRegion("DetailRegion", typeof(Views.DetailRegion.LargeItems));
+            }
         }
 
         #endregion
