@@ -14,6 +14,8 @@ namespace PracticeRegionManager.ViewModels.Modals
 
         }
 
+        #region IDialogAware の実装
+
         public string Title => "てちゅてちゅもーだる";
 
         public event Action<IDialogResult> RequestClose;
@@ -30,5 +32,7 @@ namespace PracticeRegionManager.ViewModels.Modals
         public void OnDialogOpened(IDialogParameters parameters)
         {
         }
+
+        #endregion
     }
 }
