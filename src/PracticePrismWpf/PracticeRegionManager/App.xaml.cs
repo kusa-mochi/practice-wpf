@@ -1,6 +1,8 @@
-﻿using PracticeRegionManager.Views;
+﻿using PracticeRegionManager.Common;
+using PracticeRegionManager.Views;
 using Prism.Ioc;
 using Prism.Modularity;
+using Prism.Services.Dialogs;
 using System.Windows;
 
 namespace PracticeRegionManager
@@ -17,6 +19,7 @@ namespace PracticeRegionManager
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.Register<IDialogService, GlobalDialogService>();
             containerRegistry.RegisterForNavigation<Views.MainRegion.Login>("Main_Login");
             containerRegistry.RegisterForNavigation<Views.MainRegion.Front>("Main_Front");
             containerRegistry.RegisterForNavigation<Views.DetailRegion.LargeItems>("Detail_Large");

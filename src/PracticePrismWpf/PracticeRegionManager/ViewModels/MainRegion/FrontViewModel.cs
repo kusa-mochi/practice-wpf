@@ -35,10 +35,10 @@ namespace PracticeRegionManager.ViewModels.MainRegion
 
         #region OpenDetailModal コマンド
 
-        private DelegateCommand _OpenDetailModal;
-        public DelegateCommand OpenDetailModal =>
-            _OpenDetailModal ?? (_OpenDetailModal = new DelegateCommand(ExecuteOpenDetailModal));
-        void ExecuteOpenDetailModal()
+        private DelegateCommand<IRegionManager> _OpenDetailModal;
+        public DelegateCommand<IRegionManager> OpenDetailModal =>
+            _OpenDetailModal ?? (_OpenDetailModal = new DelegateCommand<IRegionManager>(ExecuteOpenDetailModal));
+        void ExecuteOpenDetailModal(IRegionManager parameter)
         {
             _dialogService.ShowDialog("Modal_Detail");
         }
