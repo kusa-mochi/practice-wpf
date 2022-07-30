@@ -19,6 +19,9 @@ namespace PracticeRegionManager
         {
             containerRegistry.RegisterForNavigation<Views.MainRegion.Login>("Main_Login");
             containerRegistry.RegisterForNavigation<Views.MainRegion.Front>("Main_Front");
+            containerRegistry.RegisterForNavigation<Views.DetailRegion.LargeItems>("Detail_Large");
+            containerRegistry.RegisterForNavigation<Views.DetailRegion.MiddleItems>("Detail_Middle");
+            containerRegistry.RegisterForNavigation<Views.DetailRegion.SmallItems>("Detail_Small");
             containerRegistry.RegisterDialog<Views.Modals.DetailModal>("Modal_Detail");
         }
     }

@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="PracticeRegionManager.Views.DetailRegion.LargeItems"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <TextBlock Text="大項目一覧" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    </Grid>
+</UserControl>

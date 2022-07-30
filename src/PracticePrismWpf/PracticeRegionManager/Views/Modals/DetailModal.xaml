@@ -4,9 +4,19 @@
         prism:ViewModelLocator.AutoWireViewModel="True" Width="640" Height="480">
     <DockPanel LastChildFill="True">
         <TreeView DockPanel.Dock="Left">
-            <TreeViewItem Header="大項目">
-                <TreeViewItem Header="中項目">
-                    <TreeViewItem Header="小項目"></TreeViewItem>
+            <TreeViewItem>
+                <TreeViewItem.Header>
+                    <Button Content="大項目" Command="{Binding ShowLargeItemsCommand}" />
+                </TreeViewItem.Header>
+                <TreeViewItem>
+                    <TreeViewItem.Header>
+                        <Button Content="中項目" Command="{Binding ShowMiddleItemsCommand}" />
+                    </TreeViewItem.Header>
+                    <TreeViewItem>
+                        <TreeViewItem.Header>
+                            <Button Content="小項目" Command="{Binding ShowSmallItemsCommand}" />
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
                 </TreeViewItem>
             </TreeViewItem>
         </TreeView>

@@ -56,10 +56,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\DetailRegion\LargeItemsViewModel.cs" />
+    <Compile Include="ViewModels\DetailRegion\MiddleItemsViewModel.cs" />
     <Compile Include="ViewModels\Modals\DetailModalViewModel.cs" />
+    <Compile Include="ViewModels\DetailRegion\SmallItemsViewModel.cs" />
+    <Compile Include="Views\DetailRegion\LargeItems.xaml.cs">
+      <DependentUpon>LargeItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DetailRegion\MiddleItems.xaml.cs">
+      <DependentUpon>MiddleItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DetailRegion\SmallItems.xaml.cs">
+      <DependentUpon>SmallItems.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Modals\DetailModal.xaml.cs">
       <DependentUpon>DetailModal.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\DetailRegion\LargeItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DetailRegion\MiddleItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DetailRegion\SmallItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainRegion\Front.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
