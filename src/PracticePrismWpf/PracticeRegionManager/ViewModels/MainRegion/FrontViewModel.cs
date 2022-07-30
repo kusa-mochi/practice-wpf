@@ -1,6 +1,7 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
+using Prism.Services.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,11 +33,24 @@ namespace PracticeRegionManager.ViewModels.MainRegion
 
         #endregion
 
+        #region OpenDetailModal コマンド
+
+        private DelegateCommand _OpenDetailModal;
+        public DelegateCommand OpenDetailModal =>
+            _OpenDetailModal ?? (_OpenDetailModal = new DelegateCommand(ExecuteOpenDetailModal));
+        void ExecuteOpenDetailModal()
+        {
+            _dialogService.ShowDialog("Modal_Detail");
+        }
+
+        #endregion
+
         #region コンストラクタ
 
-        public FrontViewModel(IRegionManager regionManager)
+        public FrontViewModel(IRegionManager regionManager, IDialogService dialogService)
         {
             _regionManager = regionManager;
+            _dialogService = dialogService;
         }
 
         #endregion
@@ -44,6 +58,7 @@ namespace PracticeRegionManager.ViewModels.MainRegion
         #region フィールド
 
         private IRegionManager _regionManager = null;
+        private IDialogService _dialogService = null;
 
         #endregion
     }
